@@ -2,58 +2,7 @@
 <html> 
     <head> 
         <title>WhereToGo - your best travel recommendation</title>
-        <style> 
-            html, body { 
-                margin: 0; 
-                padding: 0; 
-                box-sizing: border-box; 
-            }
-            header { 
-                width: 100%; 
-                height: 5rem; 
-                background-color: rgba(0, 0, 0, 0.7); 
-                display: flex; 
-                justify-content: space-between; 
-                align-items: center; 
-            } 
-        
-            #search { 
-                background-color: white; 
-                height: 1.6rem; 
-                border-radius: 2rem; 
-                padding-left: 0.5rem; 
-                color: green;
-                display: flex; 
-                justify-content: space-between; 
-                align-items: center; 
-            }
-
-            input { 
-                border: none; 
-                outline: none; 
-                background-color: inherit; 
-            }
-
-            #search > div { 
-                display: flex; 
-                justify-content: center; 
-                align-items: center 
-            }
-
-            #search button { 
-                background-color: green; 
-                color: white; border: none; 
-                border-radius: 0.4rem; 
-                font-size: 0.6rem; 
-                padding: 0.2rem 0.5rem; 
-                height: 80%; 
-                margin-right: 0.5rem; 
-            }
-        
-            #search button:hover { 
-                cursor: pointer; 
-            } 
-        </style> 
+        <link rel='stylesheet' href='styles.css' />
     </head>
     
     <body> 
@@ -61,19 +10,20 @@
         <header> 
             <!-- LOGO --> 
             <div id='logo'> 
-                <span>Logo text</span> <span>LOGO</span> 
+                <span>GoTravel</span> 
+                <img src="airplane.svg" alt='logo' />
             </div>
 
             <!-- NAVIGATION BAR --> 
             <navbar> 
                 <a href='/'>Home</a> 
-                <a href='/about'>About Us</a> 
-                <a href='/contact'>Contact Us</a> 
+                <a href='#about'>About Us</a> 
+                <a href='#contact'>Contact Us</a> 
             </navbar> 
             
             <!-- SEARCH COMPONENT --> 
             <section id='search'> 
-                <input type='text' />
+                <input type='text' placeholder='Enter a destination or keyword' />
 
                 <div id='search-controls'> 
                     <span>ICON</span> 
@@ -82,6 +32,30 @@
                 </div> 
             </section> 
         </header>
+
+        <!-- SIDEBAR SOCIAL -->
+        <aside>
+            <section>
+                <!-- VERTICAL LINE -->
+                <div></div>
+            </section>
+
+            <section>
+                <img src="/icons/twitter.svg" alt='twitter' />
+                <img src="/icons/facebook.svg" alt='facebook' />
+                <img src="/icons/instagram.svg" alt='instagram' />
+                <img src="/icons/youtube.svg" alt='youtube' />
+            </section>
+        </aside>
+
+        <!-- HOME -->
+        <section id="home" class='page'></section>
+        
+        <!-- About Us -->
+        <section id="about" class='page'></section>
+        
+        <!-- Contact Us -->
+        <section id="contact" class='page'></section>
         
     </body>
 </html>

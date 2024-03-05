@@ -1,0 +1,131 @@
+:root {
+    --header-height: 3rem;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+header { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw; 
+    height: var(--header-height);
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 3rem;
+    margin: 0 auto;
+} 
+
+navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#logo img {
+    width: 25px;
+}
+
+#search { 
+    background-color: white; 
+    height: 1.6rem; 
+    min-width: 400px;
+    border-radius: 2rem; 
+    padding-left: 0.5rem; 
+    color: black;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+#search input { 
+    width: 100%;
+    border: none; 
+    outline: none; 
+    background-color: inherit; 
+}
+
+#search input::placeholder {
+    color: red;
+}
+
+#search > div { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center 
+}
+
+#search button { 
+    background-color: green; 
+    color: white; border: none; 
+    border-radius: 0.4rem; 
+    font-size: 0.6rem; 
+    padding: 0.2rem 0.5rem; 
+    height: 80%; 
+    margin-right: 0.5rem; 
+}
+
+#search button:hover { 
+    cursor: pointer; 
+} 
+
+aside {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 60px;
+    background: lightgreen;
+    height: 100%;
+}
+
+aside > section {
+    /* display: flex; */
+    height: 40%;
+    padding: 5rem 0;
+}
+aside > section div {
+    border-right: 2px solid white;
+    width: 50%;
+    height: 100%
+}
+
+aside section:last-child {
+    height: 60%;
+    background: orange;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem;
+}
+aside section:last-child img {
+    width: 20px;
+}
+
+.page {
+    margin-top: var(--header-height);
+    background: pink;
+    width: 100%;
+    height: 500px;
+}
