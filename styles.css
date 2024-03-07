@@ -222,3 +222,41 @@ main {
     justify-content: center;
     gap: 1rem;
 }
+
+#our-team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+    border: 2px solid red;
+    gap: 5rem;
+}
+
+#our-team > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border: 2px solid green;
+}
+
+.team-member {
+    display: flex; 
+    height: 100%;
+    background-color: pink;
+}
+
+.team-member > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.team-member .job-title {
+    padding: 1rem 0;
+    width: 100%;
+    background-color: blue;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
