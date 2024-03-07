@@ -78,7 +78,7 @@ navbar a {
 }
 
 #search input::placeholder {
-    color: red;
+    color: lightgray;
 }
 
 #search > div { 
@@ -153,11 +153,9 @@ aside section:last-child img {
 .page {
     padding: 0 3rem;
     padding-top: var(--header-height);
-    /* background: pink; */
     margin-left: var(--aside-width);
     width: calc(100% - var(--aside-width));
     height: calc(100% - var(--header-height));
-    /* border: 2px solid red; */
     scroll-behavior: smooth;
 }
 
@@ -228,7 +226,6 @@ main {
     align-items: center;
     justify-content: space-between;
     font-size: 3rem;
-    border: 2px solid red;
     gap: 5rem;
 }
 
@@ -243,14 +240,15 @@ main {
 
 .team-member {
     width: 250px;
-    height: 320px;
+    height: 380px;
     display: flex; 
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color:  rgba(0, 0, 0, 0.5);
-    padding: 1rem 0.7rem;
     gap: 1rem;
+    justify-content: space-between;
+    background-color:  rgba(0, 0, 0, 0.8);
+    padding: 1rem 0.7rem;
+    border-radius: 1rem;
 }
 
 .team-member .member-info {
