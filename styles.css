@@ -232,11 +232,22 @@ main {
     gap: 5rem;
 }
 
+#our-team .members {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
 .team-member {
-    width: 300px;
+    width: 250px;
+    height: 320px;
     display: flex; 
     flex-direction: column;
-    height: 100%;
+    align-items: center;
+    justify-content: space-between;
     background-color:  rgba(0, 0, 0, 0.5);
     padding: 1rem 0.7rem;
     gap: 1rem;
@@ -246,6 +257,7 @@ main {
     display: flex;
     justify-content: space-start;
     align-items: flex-end;
+    height: 25%;
     gap: 1rem;
     font-size: 1.3rem;
 }
@@ -257,11 +269,13 @@ main {
 .team-member .job-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: space-between;
+    align-items: center;
     gap: 2rem;
     font-size: 0.9rem;
     line-height: 1.2rem;
+    height: 100%;
+    padding: 0 1rem;
 }
 
 .team-member .job-title {
