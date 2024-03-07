@@ -113,6 +113,10 @@ button {
     padding: 0.8rem 1.4rem; 
 }
 
+.btn-extend {
+    width: 100%;
+}
+
 button:hover { 
     cursor: pointer; 
 } 
@@ -285,4 +289,42 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
+}
+
+/* CONTACT US */
+#contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20rem;
+}
+
+form {
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.4rem;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+form input {
+    height: 1.8rem;
+}
+
+form textarea {
+   resize: none;
 }
