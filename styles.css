@@ -232,23 +232,36 @@ main {
     gap: 5rem;
 }
 
-#our-team > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    border: 2px solid green;
-}
-
 .team-member {
+    width: 300px;
     display: flex; 
+    flex-direction: column;
     height: 100%;
-    background-color: pink;
+    background-color:  rgba(0, 0, 0, 0.5);
+    padding: 1rem 0.7rem;
+    gap: 1rem;
 }
 
-.team-member > div{
+.team-member .member-info {
+    display: flex;
+    justify-content: space-start;
+    align-items: flex-end;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.team-member img {
+    width: 70px;
+}
+
+.team-member .job-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    gap: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
 }
 
 .team-member .job-title {
@@ -259,4 +272,5 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.1rem;
 }
