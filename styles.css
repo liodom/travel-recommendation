@@ -207,6 +207,20 @@ main {
     align-items: flex-start;
 }
 
+.search-results {
+    position: fixed;
+    visibility: hidden;
+    top: calc(var(--header-height) + 20px);
+    right: 30px;
+    width: 300px;
+    background-color: white;
+    padding: 2rem;
+}
+
+.show {
+    visibility: visible;
+}
+
 
 /* ABOUT PAGE */
 #about {

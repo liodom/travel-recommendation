@@ -16,11 +16,48 @@ async function getData(){
 
     // FILTER RECOMMENDATIONS
     filteredRecommendations = filterRecommendations(recommendations, lowerCaseInput)
+    
+    // DISPLAY RESULTS
+    const searchResultsContainer = document.querySelector(".search-results");
+    searchResultsContainer.classList.add("show")
+
+    console.log('filtered Recommendations => ', filteredRecommendations)
+    console.log('filtered Recommendations.length => ', filteredRecommendations.length)
+
+    const results = filteredRecommendations.length > 0 ? 'cities' in filteredRecommendations[0] ? filteredRecommendations.reduce((acc, curr) => [...acc, curr.cities], []).map(recommendation => createResultCard(recommendation)).join("") : filteredRecommendations.map(recommendation => createResultCard(recommendation)).join("") : 'no results' ;
+    console.log('results => ', results)
+
+    searchResultsContainer.innerHTML = results;
 
 
+    
+    // CLEAR INPUT TEXT FIELD
+    
+    
     console.log('recommendations => ', recommendations);
     console.log('filteredRecommendations => ', filteredRecommendations)
+    
+}
 
+function createResultCard(recommendation){
+    const {imageUrl, name, description} = recommendation;
+    return `
+        <div class='result-element'>
+            <img src=${imageUrl} alt=${name} />
+
+            <div>
+                <span>${name}</span>
+                <p>${description}</p>
+                <button>Visit</button>
+            </div>
+        </div>
+    `
+}
+
+function clearSearchResults(){ 
+    // DISPLAY RESULTS
+    const searchResultsContainer = document.querySelector(".search-results");
+    searchResultsContainer.classList.remove("show")
 }
 
 function filterRecommendations(Allrecommendations, lowerCaseText) {
@@ -28,7 +65,7 @@ function filterRecommendations(Allrecommendations, lowerCaseText) {
     
     switch(lowerCaseText){
         case 'beach':
-        case 'beaches':
+            case 'beaches':
             filtered = Allrecommendations["beaches"]
             break;
         case 'temple':
@@ -40,7 +77,7 @@ function filterRecommendations(Allrecommendations, lowerCaseText) {
             filtered = Allrecommendations["countries"]
             break;
         default:
-            filtered = "nothing to recommend"
+            filtered = ""
             break;
     }
     return filtered;
