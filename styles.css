@@ -75,6 +75,7 @@ navbar a {
     border: none; 
     outline: none; 
     background-color: inherit; 
+    color: black;
 }
 
 #search input::placeholder {

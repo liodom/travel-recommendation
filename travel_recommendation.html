@@ -23,10 +23,10 @@
 
             <!-- SEARCH COMPONENT -->
             <section id='search'>
-                <input type='text' placeholder='Enter a destination or keyword'/>
+                <input id='input-recommendation' type='text' placeholder='Enter a destination or keyword'/>
                 <div id='search-controls'>
                     <span>ICON</span>
-                    <button class='btn-small'>Search</button>
+                    <button class='btn-small' onclick="getData();">Search</button>
                     <button class='btn-small'>Clear</button>
                 </div>
             </section>
@@ -182,5 +182,8 @@
                 </form>
             </section>
         </main>
+
+        <script src='./travel_recommendation.js'>
+        </script>
     </body>
 </html>
